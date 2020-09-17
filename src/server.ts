@@ -15,7 +15,7 @@ import { fileURLToPath } from 'url';
   app.use(bodyParser.json());
 
  
-  app.get( "/filteredimage", async ( req, res ) => {
+  app.get( "/filteredimage", async ( req: express.Request, res: express.Response ) => {
     const url: string = req.query.image_url
 
     if (url === "" || url === undefined) {
